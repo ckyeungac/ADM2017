@@ -1,11 +1,12 @@
 # ADM 2017
+
 This is the repository for the code in the paper *Incorporating Features Learned by an Enhanced Deep Knowledge Tracing Model for STEM/Non-STEM Job Prediction*.
---
+
 
 ## Abstract
 The [2017 ASSISTments Data Mining competition\footnote](http://sites.google.com/view/assistmentsdatamining/) aims to use data from a longitudinal study for predicting a brand-new outcome of students which had never been studied before by the educational data mining research community. Specifically, it facilitates research in developing predictive models that predict whether the first job of a student out of college belongs to a STEM (the acronym for science, technology, engineering, and mathematics) field. This is based on the student's learning history on [the ASSISTments blended learning platform](http://www.assistments.org/) in the form of extensive clickstream data gathered during the middle school years. To tackle this challenge, we first estimate the expected knowledge state of students with respect to different mathematical skills using a deep knowledge tracing (DKT) model and an enhanced DKT (DKT+) model. We then combine the features corresponding to the DKT/DKT+ expected knowledge state with other features extracted directly from the student profile in the dataset to train several machine learning models for the STEM/non-STEM job prediction. Our experiments show that models trained with the combined features generally perform better than the models trained with the student profile alone. Detailed analysis on the student's knowledge state reveals that, when compared with non-STEM students, STEM students generally show a higher mastery level and a higher learning gain in mathematics.
 
---
+
 ## Description of files
 
 `main.py`, `model.py`, `utils.py`, and `load_data.py` are the DKT+ implementation. It is adopted from this [github](https://github.com/ckyeungac/deep-knowledge-tracing-plus). The trained model is stored in `./dkt_models/assistmnet_challenge` with a sample demo `sample_experiment.ipynb` which demonstrate how to load the model and use it to generate `./data/students_knowledge_states_dktp.csv` and `./data/students_knowledge_states_dkt.csv`. These two files are the predicted knowledge state obtained for each student from the DKT+ model and the DKT model, respectively. All of the above files support pave the path to the experiment of our paper.
